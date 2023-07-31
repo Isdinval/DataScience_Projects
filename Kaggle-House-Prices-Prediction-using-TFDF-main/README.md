@@ -16,50 +16,30 @@ The Ames Housing dataset was compiled by Dean De Cock for use in data science ed
 Photo by Tom Thain on Unsplash.
 
 ## My WORK
-it's a Python script that performs house price prediction using a stacked regression technique. It uses various machine learning models and feature engineering techniques to make predictions. Below is a summary of the steps and models used:
+### House Price Prediction - Data Preprocessing and Ensemble Modeling
 
-Step I: Data Preprocessing and Feature Engineering
-The script starts by importing necessary libraries and loading the training and test datasets.
-It analyzes and preprocesses the data to handle missing values and skewed features.
-It transforms the target variable ('SalePrice') to make it more normally distributed.
-It concatenates the train and test data for feature engineering.
-It applies label encoding to certain categorical variables that contain ordinal information.
-It adds a new feature 'TotalSF' which represents the total area of basement, first floor, and second floor of each house.
-It transforms the highly skewed numerical features using Box Cox Transformation.
-It creates dummy variables for categorical features.
+#### Description:
+This project demonstrates my expertise in data preprocessing, feature engineering, and ensemble modeling techniques for a house price prediction problem. The code showcases my ability to handle real-world datasets, perform data cleaning, and extract meaningful features. I have used various statistical techniques to analyze and handle outliers, as well as missing data. The feature engineering process involves transforming numerical features, creating new meaningful features, and encoding categorical variables.
 
-Step II: Modelling
-The script defines a cross-validation strategy using KFold.
-It defines several base regression models:
-Lasso Regression
-Elastic Net Regression
-Kernel Ridge Regression
-Gradient Boosting Regression
-XGBoost Regression
-LightGBM Regression
+To build an accurate predictive model, I have implemented several base regression models such as Lasso Regression, Elastic Net Regression, Kernel Ridge Regression, Gradient Boosting Regression, XGBoost Regression, and LightGBM Regression. Through cross-validation, I have evaluated each model's performance using the root mean squared error (RMSE) as the evaluation metric.
 
-Step III: Stacking Models
-It creates a custom class AveragingModels to average the predictions from the base models.
-It trains the stacked model on the training data using the averaged base models.
-It makes predictions on the training data and the test data.
+To further enhance predictive performance, I have employed a stacking technique to create an ensemble model. By combining the strengths of multiple base models, the stacked model achieves better accuracy and robustness in predicting house prices.
 
-Step IV: Prediction and Submission
-It converts the predictions back to the original scale by applying the inverse transformation on the target variable.
-It saves the predictions to a CSV file in the required format for submission.
+The final submission file contains the predicted sale prices for the test data. This project demonstrates my proficiency in data processing, modeling, and delivering actionable insights for real-world problems.
 
-Feel free to explore the code and documentation provided here. If you have any questions or suggestions, please don't hesitate to reach out. Happy coding and happy predicting!
+### House Price Prediction using Stacked Regression - Hyperparameter Optimization
 
-## Libraries used
-Data Manipulation and Analysis:
-numpy
-pandas
-scipy
+#### Description:
+This GitHub project showcases my expertise in house price prediction using stacked regression models with hyperparameter optimization. The code demonstrates my proficiency in data preprocessing, feature engineering, and advanced regression techniques to accurately predict house prices.
 
-Data Visualization:
-matplotlib
-seaborn
+The project begins with data preprocessing, including handling missing values and outliers. Outliers in the target variable 'SalePrice' are removed to improve model performance. The target variable is then transformed using a logarithmic transformation to achieve a more normal distribution.
 
-Machine Learning:
-sklearn (scikit-learn)
-xgboost
-lightgbm
+Feature engineering is a crucial aspect of this project. New features are created to capture important aspects of the data, such as the total area of the basement, first floor, and second floor of each house. Skewed numerical features are identified and transformed using the Box-Cox method to achieve better model performance.
+
+Categorical features are appropriately handled by applying label encoding and converting some numerical variables into categorical ones, allowing the models to capture any meaningful order information.
+
+The stacked regression models are built using Lasso Regression, Elastic Net Regression, and Kernel Ridge Regression. A Grid Search Cross-Validation is employed to optimize hyperparameters for each regression model. This ensures that the models are fine-tuned for maximum predictive accuracy.
+
+The final submission file contains the predicted sale prices for the test data. The project showcases my skills in machine learning modeling, hyperparameter optimization, and delivering reliable predictions for real-world problems.
+
+Overall, this project demonstrates my proficiency in data science, from data preprocessing and feature engineering to building powerful stacked regression models for accurate house price prediction. As a data science professional, I continuously seek to optimize and enhance predictive models to solve complex problems in the field of real estate and beyond.
