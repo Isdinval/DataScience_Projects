@@ -1,9 +1,3 @@
-"""
-@author: Maxime.
-
-Github: https://github.com/maximedrn
-Version: 1.1
-"""
 
 # Colorama module: pip install colorama
 from colorama import init, Fore, Style  # Do not work on MacOS and Linux.
