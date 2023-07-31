@@ -16,17 +16,50 @@ The Ames Housing dataset was compiled by Dean De Cock for use in data science ed
 Photo by Tom Thain on Unsplash.
 
 ## My WORK
-In this project, I had the exciting opportunity to participate in the Kaggle House Prices - Advanced Regression Techniques competition. The goal was to predict sales prices and gain practical experience in feature engineering, random forests, and gradient boosting.
+it's a Python script that performs house price prediction using a stacked regression technique. It uses various machine learning models and feature engineering techniques to make predictions. Below is a summary of the steps and models used:
 
-Throughout the project, I employed various regressor models to tackle the challenge. I explored the classic TensorFlow Decision Forest and experimented with different variations, including the GradientBoostedTreesModel and the CART model. Additionally, I utilized powerful regressors such as Lasso, Elastic Net, Kernel Ridge, Gradient Boosting Regressor, XGBoost, and LightGBM to enhance my predictions.
+Step I: Data Preprocessing and Feature Engineering
+The script starts by importing necessary libraries and loading the training and test datasets.
+It analyzes and preprocesses the data to handle missing values and skewed features.
+It transforms the target variable ('SalePrice') to make it more normally distributed.
+It concatenates the train and test data for feature engineering.
+It applies label encoding to certain categorical variables that contain ordinal information.
+It adds a new feature 'TotalSF' which represents the total area of basement, first floor, and second floor of each house.
+It transforms the highly skewed numerical features using Box Cox Transformation.
+It creates dummy variables for categorical features.
 
-My overall approach to this problem was designed to be concise yet effective. Here's an overview of the process I employed:
-- Sequentially imputing missing values: I addressed missing data points in a step-by-step manner, ensuring that each variable was appropriately handled.
-- Treating numerical variables as categorical: For certain numerical variables that exhibited categorical behavior, I transformed them to capture their underlying nature accurately.
-- Label encoding for ordered categorical variables: Categorical variables that conveyed ordered information were encoded using a label encoding technique, preserving their inherent order.
-- Box Cox Transformation for skewed features: Instead of a standard log-transformation, I applied the Box Cox Transformation to skewed features. This approach proved to yield slightly better results in both the leaderboard and cross-validation stages.
-- Creating dummy variables: Categorical features were transformed into dummy variables, allowing the models to effectively capture their impact on the target variable.
+Step II: Modelling
+The script defines a cross-validation strategy using KFold.
+It defines several base regression models:
+Lasso Regression
+Elastic Net Regression
+Kernel Ridge Regression
+Gradient Boosting Regression
+XGBoost Regression
+LightGBM Regression
 
-By following this approach, I was able to build a robust and efficient solution for the Kaggle House Prices competition. I hope that the techniques and models showcased in this repository will be valuable to fellow data enthusiasts and inspire further exploration in the field of regression analysis.
+Step III: Stacking Models
+It creates a custom class AveragingModels to average the predictions from the base models.
+It trains the stacked model on the training data using the averaged base models.
+It makes predictions on the training data and the test data.
+
+Step IV: Prediction and Submission
+It converts the predictions back to the original scale by applying the inverse transformation on the target variable.
+It saves the predictions to a CSV file in the required format for submission.
 
 Feel free to explore the code and documentation provided here. If you have any questions or suggestions, please don't hesitate to reach out. Happy coding and happy predicting!
+
+## Libraries used
+Data Manipulation and Analysis:
+numpy
+pandas
+scipy
+
+Data Visualization:
+matplotlib
+seaborn
+
+Machine Learning:
+sklearn (scikit-learn)
+xgboost
+lightgbm
