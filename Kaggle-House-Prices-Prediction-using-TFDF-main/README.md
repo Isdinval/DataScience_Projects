@@ -15,14 +15,12 @@ The Ames Housing dataset was compiled by Dean De Cock for use in data science ed
 
 Photo by Tom Thain on Unsplash.
 
-## My Message
-Welcome to my GitHub repository!
-
+## My WORK
 In this project, I had the exciting opportunity to participate in the Kaggle House Prices - Advanced Regression Techniques competition. The goal was to predict sales prices and gain practical experience in feature engineering, random forests, and gradient boosting.
 
 Throughout the project, I employed various regressor models to tackle the challenge. I explored the classic TensorFlow Decision Forest and experimented with different variations, including the GradientBoostedTreesModel and the CART model. Additionally, I utilized powerful regressors such as Lasso, Elastic Net, Kernel Ridge, Gradient Boosting Regressor, XGBoost, and LightGBM to enhance my predictions.
 
-My overall approach to this problem was designed to be concise yet effective. Here's an overview of the feature engineering process I employed:
+My overall approach to this problem was designed to be concise yet effective. Here's an overview of the process I employed:
 - Sequentially imputing missing values: I addressed missing data points in a step-by-step manner, ensuring that each variable was appropriately handled.
 - Treating numerical variables as categorical: For certain numerical variables that exhibited categorical behavior, I transformed them to capture their underlying nature accurately.
 - Label encoding for ordered categorical variables: Categorical variables that conveyed ordered information were encoded using a label encoding technique, preserving their inherent order.
