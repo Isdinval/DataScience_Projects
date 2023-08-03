@@ -1,0 +1,24 @@
+Write python code to parse the following website:
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
+
+Please ensure that the code leverages its own web browser in headless mode (if your solution requires an external browser driver).
+This will be running inside a docker container at some point and will not have access to any UI
+
+see the Excel file for Expected output...
+
+1. Calculate the Xpath automatically for the "Argument Reference" section (https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#argument-reference)
+2. Parse all the bullet points under the section 'This resource supports the following arguments:', there are 5 from this webpage
+3. for each bulletpoint :
+Parse the text inside the inner <code> tag , this we will call it the 'argument_name' (eg first would have a value of 'bucket', 'bucket_prefix' for the second and so on)
+Parse the Description text inside, this we will call it the 'argument_description' (eg for the first it should contain '(Optional, Forces new resource) Name of the bucket.......may be found here'
+4. print all a table (see excel file) that contains the 'argument_name'. and the 'argument_description'
+
+you must submit your python code and ecvidence that you are able to parse the bullets from these other webpages...
+
+The winner will be the first person to demonstrate this working in Python (with code attached), and must be flexible to work on other pages like so:
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl (4 arguments to parse)
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_cors_configuration (3 arguments to parse)
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_intelligent_tiering_configuration (5 arguments to parse)
+
+Recommended Skills : 
+Amazon Web Services, Python, Scrapy, Selenium, Web Scraping
