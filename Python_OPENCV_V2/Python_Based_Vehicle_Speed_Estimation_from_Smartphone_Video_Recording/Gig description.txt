@@ -1,0 +1,31 @@
+roject Details
+₹20,000.00 – 40,000.00 INR
+ BIDDING ENDS IN 6 DAYS, 23 HOURS
+*Project Objectives:* The goal is to create Python-based server-side code API that takes a video footage taken from the rear camera of an Android smartphone as input, and estimates the speed of the vehicle. The estimated speed should be accurate within a margin of 10% error.
+
+*Inputs:*
+1. A single video recording captured through an Android smartphone's rear camera, available in .mp4 format.
+2. Vertical field of view of the camera (measured as an angle).
+
+*Expected Output:* Vehicle's speed (displayed on the console or saved to a file)
+
+*Preconditions (assumptions):*
+1. The vehicle is moving along a straight path.
+2. The smartphone camera is fixed and immune to any form of movement (shakes, rotations, etc.).
+3. The vehicle maintains a constant speed throughout the video recording.
+4. The dimensions of the vehicle's license plate are accurately known beforehand.
+5. Only a single vehicle is featured in the video recording with no other moving entities in the backdrop.
+6. The video frame rate is maintained at 30 FPS.
+7. The video quality is 720P or higher.
+
+*Evaluation Criteria:* The developed code should offer an estimated speed that falls within a 10% error margin of the actual speed. This should hold true for both the provided and unseen footage that bear similarity in aspects like quality, angle, lighting conditions, etc.
+
+*Project Timeline:* Do provide an estimated delivery date for the project.
+
+*Support:* If you require assistance with designing a strategy, feel free to contact us. Please note that for development purposes, 20 video recordings along with their actual speeds will be provided.
+
+*Further Instructions:* The Python code developed will be executed on backend servers. A concise readme document detailing the setup procedure, code description, and strategy explanation should be provided along with the code.
+Skills Required
+Python
+OpenCV
+Video Processing
